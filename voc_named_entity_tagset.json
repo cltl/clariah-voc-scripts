@@ -1,0 +1,50 @@
+{
+  "name" : "VOC Named Entities",
+  "typeUiName" : null,
+  "description" : "Named Entity tagset for the VOC Use Case",
+  "language" : "nl",
+  "type" : null,
+  "type_name" : null,
+  "type_description" : null,
+  "tags" : [ {
+    "tag_name" : "LOC",
+    "tag_description" : "Location"
+  }, {
+    "tag_name" : "LOCderiv",
+    "tag_description" : "Location derivative"
+  }, {
+    "tag_name" : "MES",
+    "tag_description" : "Measure"
+  }, {
+    "tag_name" : "MON",
+    "tag_description" : "Monetary Value"
+  }, {
+    "tag_name" : "ORG",
+    "tag_description" : "Organization"
+  }, {
+    "tag_name" : "ORGderiv",
+    "tag_description" : "Derived form of Organization"
+  }, {
+    "tag_name" : "OTH",
+    "tag_description" : "Other"
+  }, {
+    "tag_name" : "PER",
+    "tag_description" : "Person"
+  }, {
+    "tag_name" : "PERderiv",
+    "tag_description" : "Person derivative"
+  }, {
+    "tag_name" : "SHP",
+    "tag_description" : "Ship name"
+  }, {
+    "tag_name" : "SHPderiv",
+    "tag_description" : "Ship name derivative"
+  }, {
+    "tag_name" : "TGO",
+    "tag_description" : "Trade Good"
+  }, {
+    "tag_name" : "TGOderiv",
+    "tag_description" : "Trade Good derivative"
+  } ],
+  "create_tag" : false
+}

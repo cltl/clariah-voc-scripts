@@ -1,7 +1,6 @@
 import glob
 import re
 import sys
-from functools import reduce
 from index_page_extracter import gazetteer_items, format_lexicon_entry
 
 
