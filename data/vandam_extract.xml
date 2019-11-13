@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:egXML="http://www.tei-c.org/ns/Examples">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Vierde boek</title>
+            </titleStmt>
+            <publicationStmt>
+                <p>
+                    <date>1693-1701</date>
+                    <idno type="sourceID">vandam:vol4</idno>
+                    <idno type="pid">INT_db216f75-63d8-4e28-9994-4d141ef58410</idno>
+                </p>
+            </publicationStmt>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <pb n="4"
+                facs="http://resources.huygens.knaw.nl/retroapp/service_vandam/vandam_4/images/vandam_4_gs96_0004.tiff"/>
+            <div1 type="book">
+
+
+
+
+                <head>VIERDE BOECK</head>
+                <div2>
+                    <head>HET ECCLESIASTICQ</head>
+                    <argument>
+                        <p><hi rend="italic">Verhandelinge van het ecclesiasticq of JcercJcelijcke
+                                saecken en regieringh in Indiën,</hi><lb/><hi rend="italic">en
+                                hoedanigh deselve haar van den beginne en soo vervolgens hebben
+                                toegedragen</hi><lb/><hi rend="italic">en dat alles is gereguleert;
+                                voort aennemen van predikanten , sieckentroosters en</hi><lb/><hi
+                                rend="italic">schoolmeesters voor de kercken aldaar, met derselver
+                                respective tractemenien, en</hi><lb/><hi rend="italic">specialij
+                                eken mede raeckende het opreghten van een seminarium voor jonge
+                                studenten,</hi><lb/><hi rend="italic">hoe dat is begrepen en wat
+                                daarin is gedaan. Soo oock hoedanigh het is gelegen</hi><lb/><hi
+                                rend="italic">met de Franschen aan de Caep de Goede Hoop en wat
+                                ordre omtrent het ecclesias-</hi><lb/><hi rend="italic">ticq en den
+                                godsdienst ten aansien van deselve daar is ge-stelt.</hi></p>
+                    </argument>
+
+                    
+<note place="margin"><p>Siet de resolutie van<lb/>de 17<hi rend="superscript"
+                                >ne</hi> van 27 Fe-<lb/>bruary en 7 Augusty<lb/>1603, articulo
+                            3.</p></note>
+
+
+                    
+                    <p>Nadat de Compagnie in ’t jaar 1602 was opgereght, heeft men in het
+                        volgende<lb/>jaar voort omgesien na twee bequame mannen om den volcken in
+                        Indiën Godts<lb/>woort voor te dragen en haar tegens alle superstitiën en
+                        verleydinge der Moren<lb/>en atheïsten uyt de Heylige Schrift te vermanen,
+                        met die verdre intentie om<lb/>twee predikanten tot Bantam of andere
+                        plaatsen te doen verblijven; dat men<lb/>vorder ten eynde voorsch. soude
+                        aenqueecken vier studenten<hi rend="superscript">1</hi>), te weten
+                        so-<lb/>danige die in de studie van de theologie wel waren geavanceert, dat
+                        een of twee<lb/>van deselve tot den dienst bequaem geworden sijnde, andere
+                        in de plaats soude<lb/>werden aangenomen. Maar in ’t jaar 1606 verklaarden
+                        de Cameren dat sij tot die<lb/>tijt nogh geen bequame personen tot
+                        predikanten hadden weten te bekomen,<lb/>oock daartoe geen apparentiën
+                        sagen.</p>
+                    <p>Inmiddels is de Camer van Delft geauthoriseert geweest seecker
+                        jonghman,<lb/>Henricus Slatius <hi rend="superscript">2),</hi> in de
+                        theologie ter studie te houden den tijt van drie jaren,<lb/>voor 270 guldens
+                        in ’t jaar, mits gehouden sijnde na de voorsch. drie jaren de 
+<note
+                            place="bottom" resp="editor">1) Over deze vier studenten handelt een
+                            resolutie van Maart 1605 (Ml), naar welke<lb/>Van Dam niet
+                            verwijst.<lb/></note>
+
+                        
+<note place="bottom" resp="editor">2) Met deze eersteling is de Compagnie
+                            niet gelukkig geweest. Hier wordt mededeling<lb/>gedaan van het met hem
+                            gesloten contract en later vernemen wij nog, dat de Kamer
+                            van<lb/>Zeeland hem na volbrachte studie zou uitzenden. Verzwegen wordt
+                            echter, dat de H. H. XVII<lb/>op 17 September 1610 besloten, dat deze
+                            Kamer hem van de verplichtingen van zijn contract<lb/>Icon ontslaan,
+                            indien er tegen zijn uitzending bezwaren rezen. Zij is daartoe
+                            overgegaan op<lb/>grond van zijn onrustig en twistziek karakter en zijn
+                            Remonstrantse sympathieën. Daarna is<lb/>hij predikant geweest te
+                            Herveld en te Bleiswijk. In 1618 is hij door de Synode van
+                            Delft<lb/>vanwege zijn hatelijke geschriften en zijn uitgesproken
+                            Remonstrantse gevoelens uit zijn<lb/>ambt ontzet. Later was hij een der
+                            hoofdpersonen bij het beramen van een aanslag op het leven<lb/>van Prins
+                            Maurits. Op 5 Mei 1623 is hij op grond daarvan op het schavot onthoofd.
+                            Van zijn<lb/>geschriften is het meest bekend een pamflet ,,De
+                            gepredestineerde Dief”, anoniem in 1619 te<lb/>Friedrichstadt
+                            verschenen. Zie over hem o.m. Mooij Gesch. en Callenbach Ileurnius
+                            i.v.<lb/></note>
+
+                        <pb n="5"
+                            facs="http://resources.huygens.knaw.nl/retroapp/service_vandam/vandam_4/images/vandam_4_gs96_0005.tiff"
+                        /> Compagnie in Oost-Indiën voor predikant te dienen de tijt van seven
+                        jaeren voor 300 gulden, en de volgende vier jaren, soo hij hem wel soude
+                        mogen comporteren, voor 400 gulden 's jaars boven de kost, des dat hij niet
+                        soude mogen genieten van eenige testamenten, die hem op de reyse of aan lant
+                        bij 't volck soude mogen werden gemaeckt.</p>
+                    <p>Nogh sijn in ’t jaar 1609 de Cameren versoght, door de kerckenraden
+                        ieder<lb/>in haere respective steden *) te doen uytsien na twee predikanten
+                        en twee school-<lb/>meesters<hi rend="superscript">1</hi>
+                        <hi rend="superscript">2),</hi> getrouwde luyden van redelijcken ouderdom en
+                        goet leven, om met<lb/>haar huys vrouwen derwaarts te gaan.</p>
+                    <p>De voorsch. Slatius, sijn tijt van drie jaeren geëxpireert wesende, is hij
+                        geordon-<lb/>neert, ten eynde voorsch., van de Camer van Zeelant te
+                        vertrecken, mits dat hij<lb/>alvoren soude hebben te bevorderen sijn
+                        promotie en beroep; oock gehouden<lb/>wesen hem te laten gebruycken, daar
+                        den Gouverneur- Generaal en de Raden hem<lb/>soude mogen goetvinden te
+                        plaatsen <hi rend="superscript">3).</hi></p>
+                    <p>Gelijck mede als predikant derwaarts is gesonden Casparus Conradi Wiltens <hi
+                            rend="superscript">4),</hi><lb/>nadat hij eenige jaeren tot koste van de
+                        Compagnie hadde gestudeerd volgens de<lb/>acte off commissie van den
+                        kerckenraat van Amsterdam in dato den 25 December<lb/>1610, in de bijlagen
+                        te vinden onder n°. 2.</p>
+                    <p>En is wijders aan de classis geschreven en versoght om na vier
+                        predikanten<lb/>en vier schoolmeesters <hi rend="superscript">2),</hi> vroom
+                        en bejaart en van een goet leven, uyt te sien.</p>
+                    <p>Soo oock de kerckenraden in de respective steden aangedient de
+                        kleynen<lb/>dienst, die de Compagnie hadde van de predikanten derwaarts
+                        gesonden, met<lb/>versoeck dat bij tij ts bequame personen souden gelieven
+                        te dispiciëren, daardoor<lb/>de ware religie, beter als tot die tijt toe was
+                        geschiet, soude mogen werden voort-<lb/>geplant.</p>
+                    <p>En sijn voorts de Cameren geauthoriseert worden om eenige personen,
+                        in<lb/>Godts woort ervaren en van goet leven en getuygenisse, wel bejaart en
+                        bequaem<lb/>om tot het predickampt te werden geïnstrueert, ’t sij
+                        ambagtsluyden of andere,<lb/>aan te nemen en eenigli redelijck tractement te
+                        geven tot de eerst vertreckende 
+<note place="margin"><p>Siet de resolutie
+                                van<lb/>de 17<hi rend="superscript">ne</hi> van 3 (2)
+                                Sep-<lb/>tember 1609.</p></note>
+
+                        
+<note place="margin"><p>Siet die van 5 Sep-<lb/>tember daaraan.</p>
+                            <p>N°. 2.</p></note>
+
+                        
+<note place="margin"><p>Siet die van 18 (16)<lb/>September 1610.</p></note>
+
+                        
+<note place="margin"><p>Siet die van Meert<lb/>1614, articulo 27.* <hi
+                                    rend="superscript">5)</hi></p></note>
+
+                        
+<note place="margin"><p>Item die van July<lb/>daaraan, articulo
+                            6*.</p></note>
+
+                        
+<note place="bottom" resp="editor">1) Toen het de Kamers der Compagnie niet
+                            gelukte predikanten te vinden, ontvingen<lb/>zij de opdracht, daartoe do
+                            hulp van de kerkeraden hunner steden in te roepen. Zonder do<lb/>hulp
+                            van de Kerk bleek het niet te gaan.<lb/></note>
+
+                        
+<note place="bottom" resp="editor">2) Hier wordt een eerste poging gedaan om
+                            onderwijzers uit te zenden en zo enige<lb/>verbetering te brengen in de
+                            allerprimitiefste en hoogst gebrekkige scholen.<lb/></note>
+
+                        
+<note place="bottom" resp="editor">3) Opzettelijk verzwijgt Van Dam hier de
+                            verdere gang van zaken. Dit doet hij meer-<lb/>malen als het zaken
+                            betreft, die voor de Compagnie minder aangenaam waren. Dat zijn
+                            houding<lb/>als het anderen betreft niet dezelfde is, blijkt duidelijk
+                            op verschillende plaatsen in dit hoofd-<lb/>stuk.<lb/></note>
+
+                        
+<note place="bottom" resp="editor">4) Casparus Conradi Wiltens werd vroeger
+                            algemeen voor de eerste naar Indië uitge-<lb/>zonden Nederlandse
+                            predikant gehouden. Hij was de eerste, die van Amsterdam
+                            uitging,<lb/>maar in Zeeland was één jaar tevoren Matthias van de Broeck
+                            afgevaardigd (zie G. K. i.v.).<lb/>Op verschillende plaatsen in Indic,
+                            vooral na 1615 op Ambon, heeft Ds Wiltens belangrijk<lb/>werk verricht
+                            en in het Maleis gepredikt. Op 35-jarige leeftijd is hij in 1619
+                            overleden (zie naast<lb/>het B. W. de biografische aantekeningen in
+                            Corresp. Hulsebos).<lb/></note>
+
+                        
+<note place="bottom" resp="editor">5) Als argument voor de noodzakelijkheid
+                            om betere predikanten uit te zenden wordt<lb/>in deze resolutie o.m.
+                            aangevoerd: „Opdat men de Compagnie niet langer van
+                            naerlaeticheyt<lb/>deesen aengaende culpeeren ende de vijanden (die geen
+                            costen nochte moeyten en sparen om<lb/>deur den bandt van haere
+                            superstitieuse religie de herten van de inwoonderen tot haerlieden
+                            te<lb/>trecken ende verbinden) geen occasie te geven, om met blacme van
+                            onso natie deselve voor do<lb/>Indianen odieus ende haerlieden van ons
+                            affkeerich te maecken".<lb/></note>
+
+<note place="bottom" resp="editor"><p>2) „Beheerders der beide tafelen”
+                                    (de wereldlijke en de kerkelijke).</p></note>
+
+
+<note place="bottom" resp="editor"><p>3) „Ineen te storten”.</p></note>
+
+                        <pb n="6"
+                            facs="http://resources.huygens.knaw.nl/retroapp/service_vandam/vandam_4/images/vandam_4_gs96_0006.tiff"/>
+
+<note place="margin"><p>Siet de resolutie van<lb/>de 17<hi
+                                    rend="superscript">ne</hi> van October<lb/>1616 op ’t 15<hi
+                                    rend="superscript">de</hi> point.</p></note>
+
+
+<note place="margin"><p>Item onder n°. 4.</p></note>
+
+
+<note place="margin"><p>Siet de instructie van<lb/>24 Augustus
+                                1617,<lb/>onder <hi rend="italic">n°.</hi> 5 I.</p></note>
+
+
+<note place="margin"><p>Siet de resolutie van<lb/>de 17<hi
+                                    rend="superscript">ne</hi> van 21 Meert<lb/>1619.</p></note>
+
+
+<note place="margin"><p>Siet die van 19<lb/>Augusty 1619.*</p></note>
+
+
+<note place="margin"><p>Siet die van 24 Fe-<lb/>bruary 1621.</p></note>
+
+
+<note place="margin"><p>Siet de resulutie van<lb/>29 July 1621.</p></note>
+
+
+<note place="margin"><p>Siet de resolutie van<lb/>de 17<hi
+                                    rend="superscript">ne</hi> van 22** «)<lb/>en 23 Maert en 1
+                                April<lb/>1622*.</p></note>
+ schepen toe, om hun micldeler wijlen te
+                        exerceren met propositiën <hi rend="superscript">1)</hi> en
+                        andere<lb/>daartoe dienende oeffeningen, en hun, soo op de reys als in
+                        Incliën, tot vorderingh<lb/>van de kercken en godtsdienst te laten
+                        employeren.</p>
+                    <p>Buy ten ’t welcke mede consideratiën sijn gevallen om in Indiën scholen
+                        op<lb/>te reghten en uyt de inwoonders aldaar mettertijt goede predikanten
+                        voort te<lb/>brengen, mits dat men middelerwijlen soude devoiren doen om
+                        bequame predi-<lb/>kanten te bekomen en deselve na gelegentheyt van de gaven
+                        en bequaemheyt te<lb/>gagieren, bijsonderlijck mede om de sobere stoffe, die
+                        de Cameren voorgaven<lb/>te vinden, soo van predikanten als van
+                        siekentroosters. Hetwelcke dan nadere<lb/>gedaghten heeft verweckt tot het
+                        maecken van een project van een collegie voor<lb/>studenten, daaruyt
+                        predikanten souden kunnen voortkomen om, bij de respective<lb/>Cameren en
+                        dassen gevisiteert sijnde, aan Haar Ho. Mo. te werden overgelevert,<lb/>en
+                        soo tot opreghtingh van ’t voorsch. collegie onder derselver authoriteyt
+                        te<lb/>treden. Oock is uyt de remonstrantiën en concepten van de classes van
+                        Amster-<lb/>dam en Walcheren, item Delft, opgestelt een instructie <hi
+                            rend="superscript">2)</hi> voor de predikanten en<lb/>sieckentroosters ;
+                        mitsgaders om de Christelijcke religie in Amboina en Ternaten<lb/>voort te
+                        planten den Generaal en de Raden aangeschreven, dat uyt de
+                        voorsch.<lb/>landen herwaarts souden oversenden eenige bequame aankomende
+                        jongelingen,<lb/>geboren van aensienelijcke ouders en na haar jaeren van
+                        goet verstant en begrip,<lb/>om hier te lande in de theologie te laten
+                        studeren en, tot bequaemheyt gebraght<lb/>sijnde, weder als predikanten
+                        derwaarts te laten gaan.</p>
+                    <p>Ondertusschen souden de Cameren mede nae eenige goede deughtsame
+                        jonge-<lb/>lingen, bequaem tot de theologische studie, vernemen om deselve
+                        in sodanigen<lb/>collegie, ten eynde als voren, te laten opvoeden; dogh ’t
+                        welck geen voortganck<lb/>genomen hebbende en daarop bij de gecommitteerdens
+                        van ’t classis van Amster-<lb/>dam in bedenckinge gegeven sijnde off men
+                        niet behoorden tot Leyden sodanigh<lb/>collegie tot laste van de Compagnie
+                        op te reghten, heeft men dat doenmaals nogh<lb/>gedeclineert, en de classis
+                        versoght nae drie of vier gequalificeerde personen tot<lb/>predikanten uyt
+                        te sien; en sijn voort de gedaghten daarheenen gegaan, of men<lb/>niet
+                        behoorde in Indiën een collegie toe te stellen en daarin te brengen
+                        bequame<lb/>jongens, soo van onse als van de Indiaensche natiën, om in alle
+                        talen gedient te<lb/>mogen werden en te meerder vrughten daarvan te
+                        verwaghten; dogh sonder dat<lb/>doenmaals daarvan iets is gevallen, doordien
+                        op hetgunt voorsch. is eenige Am-<lb/>boinesche kinderen hier te lande waren
+                        overgekomen, die men heeft bestelt tot<lb/>Amersfoort, ten huyse en onder
+                        het opsigt van den predikant Wassenbergh <hi rend="superscript"
+                        >3),</hi><lb/>om haar in de Christelijcke religie en de Latijnsche tale te
+                        instrueren.</p>
+                    <p>Niettemin heeft men niet alleen weder inclinatie tot het opregten van
+                        so-<lb/>danigh collegie of seminarium beginnen te toonen, maar men is
+                        vervolgens met<lb/>d<hi rend="superscript">r</hi> Anthonius Waleus <hi
+                            rend="superscript">5)</hi> tot Leyden daarover geconvenieert, des dat
+                        het onder -</p>
+
+
+<note place="bottom" resp="editor"><p>1) Proefpreken; men vergelijke het thans
+                            nog gebruikelijke „voorstel”.</p></note>
+
+
+
+<note place="bottom" resp="editor"><p>2) Deze instructie werd vastgesteld naar
+                            aanleiding van de in bijlage 4 II. opgenomen<lb/>voorstellen van de
+                            Classes Amsterdam en Walcheren. Het vaststellen dezer instructie en
+                            het<lb/>laten overkomen van enige jongelieden voor studie in Nederland
+                            worden hier als gelijk-<lb/>waardige grootheden naast elkander
+                            geplaatst.</p></note>
+
+
+
+<note place="bottom" resp="editor"><p>3) Van de hier genoemde Ds Wassenburgh
+                            (Wassenbergh) behoeven wij alleen mede te-<lb/>delen, dat hij van 1619
+                            tot 1629 predikant te Amersfoort was.</p></note>
+
+
+
+<note place="bottom" resp="editor"><p>4) Waarschijnlijk is hier dezelfde
+                            resolutie bedoeld als die van 23 Maart 1622 (M 6);<lb/>een afzonderlijke
+                            resolutie van 22 Maart is niet te vinden.</p></note>
+
+
+
+<note place="bottom" resp="editor"><p>5) Antonius Walaeus is als één der
+                            voormannen der Contra-Remonstranten zo bekend.</p></note>
+
+
+                </div2>
+            </div1>
+
+        </body>
+
+
+    </text>
+</TEI>
