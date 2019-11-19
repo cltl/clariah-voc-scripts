@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<index-nominum xmlns:tei="http://www.tei-c.org/ns/1.0"
+   xmlns:egXML="http://www.tei-c.org/ns/Examples">
+   <entry>
+      <div-id></div-id>
+      <resp/>
+      <fullname>Pieter van Dam</fullname>
+      <person>
+         <persID>7cbbf6ce-011b-11e4-b0ff-51bcbd7c379f</persID>
+         <birth/>
+         <death></death>
+         <persName>
+            <addName/>
+            <forename></forename>
+            <infix/>
+            <surname></surname>
+            <roleName/>
+         </persName>
+      </person>
+   </entry>
+   <entry>
+      <div-id></div-id>
+      <resp/>
+      <fullname>Dr. G.W. Th. baron van Boetzelaar van Asperen en
+         Dubbeldam</fullname>
+      <person>
+         <persID/>
+         <birth/>
+         <death></death>
+         <persName>
+            <prefixTitle>baron</prefixTitle>
+            <addName/>
+            <forename>G.W.Th.</forename>
+            <infix>van</infix>
+            <surname>Boetzelaar van Asperen en
+               Dubbeldam</surname>
+            <roleName>editeur</roleName>
+         </persName>
+      </person>
+   </entry>
+</index-nominum> 

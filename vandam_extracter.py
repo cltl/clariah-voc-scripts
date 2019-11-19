@@ -185,11 +185,13 @@ def write(docid, pages, outdir, sfx):
         for p, fragments in pages:
             naf = create_naf_from_item('{}_{}'.format(docid, normalize_page(p, len(pages))), '\n\n'.join(fragments))
             naf.dump("{}/{}_{}.naf".format(outdir, docid, p))
-    elif sfx == 'text':
+    elif sfx == 'txt':
         for p, fragments in pages:
             with open("{}/{}_{}.txt".format(outdir, docid, normalize_page(p, len(pages))), 'w') as f:
                 f.write('\n\n'.join(fragments))
-
+    else:
+        raise ValueError("unrecognized format: {}; try 'naf', 'tei' or 'txt'".format(sfx))
+    
 
 def create_naf_from_item(title, content):
     naf = KafNafParser(type="NAF")
