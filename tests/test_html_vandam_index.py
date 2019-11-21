@@ -1,6 +1,6 @@
 import re
 
-from html_vandam_indices import extract_items_from_lines, extract_index_items, clean, clean_variant_parts
+from html_vandam_indices import infer_label, parenthesis_variants, validate_raw_entry, clean, variant_parts, process_file_vol4, process_line_vol4
 
 INFILE = 'data/html_vandam_index'
 
@@ -10,20 +10,21 @@ def test_line_to_items():
     clean_items = [clean(s) for s in re.split(r"\s\s+", line)]
     assert clean_items == ["Letellier, Michel", "Ongena, Petrus"]
 
-    items = extract_index_items(line)
+    items = process_line_vol4(line)
     assert items == ["Letellier", "Michel Letellier", "Ongena", "Petrus Ongena"]
 
 
 def test_variants():
     s = 'Goens, Rijcklof van, Sr.'
-    parts = clean_variant_parts(s)
+    parts = variant_parts(s)
     assert parts == [['Rijcklof van'], ['Goens'], ['Sr.']]
 
     s = 'Homer, C , (w.s. C. Zomer)'
-    assert clean_variant_parts(s) == [['C '], ['Homer']]
+    assert variant_parts(s) == [['C '], ['Homer']]
+
 
 def test_html_vandam_index_extraction():
-    indices = extract_items_from_lines(INFILE)
+    indices = process_file_vol4(INFILE)
     # name1 = "Kalero, Marcus, zie Laleio"
     assert "Marcus Kalero" in indices
     assert "zie Laleio Marcus Kalero" not in indices
@@ -36,5 +37,17 @@ def test_html_vandam_index_extraction():
     # name = "Oudshoorn van Sonneveld, H. V."
     assert "Oudshoorn van Sonneveld" in indices
     assert "H. V. Oudshoorn van Sonneveld" in indices
+
+
+def test_volume_index_3():
+    e_per = "Coeck (Jan), zie Koek."
+    s = validate_raw_entry(clean(e_per))
+    variants = parenthesis_variants(s)
+    assert variants == ['Coeck', 'Jan Coeck']
+
+    e_shp = "Gelderlant (schip), 475."
+    s = validate_raw_entry(clean(e_shp))
+    assert infer_label(s) == 'Gelderlant\tSHP'
+
 
 

@@ -21,7 +21,11 @@ def tei_path(tag):
 
 
 def untag(tag):
-    return tag.replace("{{{}}}".format(TEI_NS), "")
+    try:
+        return tag.replace("{{{}}}".format(TEI_NS), "")
+    except AttributeError:
+        print("AttributeError trying to untag: {}".format(tag))
+        return tag
 
 
 def text_and_tail(elt):
@@ -110,7 +114,7 @@ def extract(infile):
         pages, page_str, current_page = get_text(child, pages, fragments, current_page)
     if fragments:
         pages.append((current_page, fragments))
-    return pages
+    return [(p, fs) for (p, fs) in pages if fs is not None]
 
 
 def get_context(infile):
@@ -170,9 +174,9 @@ def tree_paths(element):
 
 def normalize_page(p, max):
     nb_digits_max = len(str(max))
-    nb_digits = len(p)
+    nb_digits = len(str(p))
     pfx = ['0'] * (nb_digits_max - nb_digits)
-    return ''.join(pfx) + p
+    return ''.join(pfx) + str(p)
 
 
 def write(docid, pages, outdir, sfx):
@@ -187,8 +191,11 @@ def write(docid, pages, outdir, sfx):
             naf.dump("{}/{}_{}.naf".format(outdir, docid, p))
     elif sfx == 'txt':
         for p, fragments in pages:
-            with open("{}/{}_{}.txt".format(outdir, docid, normalize_page(p, len(pages))), 'w') as f:
-                f.write('\n\n'.join(fragments))
+            try:
+                with open("{}/{}_{}.txt".format(outdir, docid, normalize_page(p, len(pages))), 'w') as f:
+                    f.write('\n\n'.join(fragments))
+            except TypeError:
+                print('found no fragments for page {}'.format(p))
     else:
         raise ValueError("unrecognized format: {}; try 'naf', 'tei' or 'txt'".format(sfx))
     
@@ -230,9 +237,9 @@ def tokenizer(model):
 
 
 def process(infile, outdir, format):
-    if format == 'tei':
+    if format == 'tei':         # not recommended as it will copy a huge header to 100+ files
         write(docid(infile), replace_paragraphs(infile), outdir, sfx=format)
-    else:
+    else:   # naf or txt
         write(docid(infile), extract(infile), outdir, sfx=format)
 
 
