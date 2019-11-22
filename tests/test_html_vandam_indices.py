@@ -1,8 +1,9 @@
 import re
 
 from html_vandam_indices import infer_label, parenthesis_variants, validate_raw_entry, clean, variant_parts, process_file_vol4, process_line_vol4
+from utils.lexicon import NE, format_entry
 
-INFILE = 'data/html_vandam_index'
+INFILE = 'data/tests/html_vandam_index'
 
 
 def test_line_to_items():
@@ -47,7 +48,7 @@ def test_volume_index_3():
 
     e_shp = "Gelderlant (schip), 475."
     s = validate_raw_entry(clean(e_shp))
-    assert infer_label(s) == 'Gelderlant\tSHP'
+    assert infer_label(s) == format_entry('Gelderlant', NE.SHP.name)
 
 
 

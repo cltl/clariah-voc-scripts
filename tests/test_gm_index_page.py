@@ -1,6 +1,5 @@
-from index_page_extracter import word_sequences, extract, variants, gazetteer_items
-from collection_extracter import LABEL
-
+from gm_index_page import word_sequences, extract, variants, gazetteer_items
+from utils.lexicon import format_entry, NE
 
 IN_FILE = "data/tests/generalemissiven_8_content_pagina-255-image.tei.xml"
 
@@ -32,16 +31,16 @@ def test_gazetteer_items():
 
 
 def test_extracter():
-    out_file = "data/gm8_255.lex"
-    extract(IN_FILE, LABEL['locations'], out_file)
+    out_file = "data/gm8_255.lex.out"
+    extract(IN_FILE, NE.LOC.name, out_file)
 
     i = 0
     with open(out_file, 'r') as f:
         for line in f:
             if i == 0:
-                assert line == "Acapulco\t{}\n".format(LABEL['locations'])
+                assert line == format_entry("Acapulco", NE.LOC.name)
             elif i == 1:
-                assert line == "Adonara\t{}\n".format(LABEL['locations'])
+                assert line == format_entry("Adonara", NE.LOC.name)
             else:
                 break
             i += 1

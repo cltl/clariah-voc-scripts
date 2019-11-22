@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:egXML="http://www.tei-c.org/ns/Examples">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Tweede boek, deel III</title>
+            </titleStmt>
+            <publicationStmt>
+                <p>
+                    <date>1693-1701</date>
+                    <idno type="sourceID">vandam:vol2:3</idno>
+                    <idno type="pid">INT_9da4bbba-eff2-481c-954a-2146de444cf4</idno>
+                </p>
+            </publicationStmt>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <pb n="570" facs="http://resources.huygens.knaw.nl/retroapp/service_vandam/vandam_2_3/images/vandam_2_3_gs83_0570.tiff"/>
+
+            <head>Bijlage VIIb.</head>
+            <p><hi rend="italic">Verkenning der Oostkust van Zuid- Afrika<hi rend="italic+superscript">1</hi><hi rend="italic">).</hi></hi></p>
+            <p>Inmiddels de commandeur niet willende Uwen Ed. Ho. Agtb<hi rend="superscript">8</hi>. galjot de<lb/>Noord vrugteloos aan de wal
+                            houden, heeft hetselve den 19 October wel bemant,<lb/>en van leeftogt,
+                            oorlogsbehoeften en weynige koopmanschappen voorsien, onder<lb/>een
+                            naeuwkeurigh berigtschrift doen zee kiesen, met ordre om r egt- aan na
+                            Rio<lb/>de la Goa, tusschen de 25 a 26 graden Zuyderbreette te gaan, en
+                            deselve te ont-<lb/>decken, te bepeylen en in een naeukeurige kaart te
+                            brengen, en alle de voordelen<lb/>langs die kust tot hier toe, die te
+                            lande en te water voor de E. Compagnie t’ er-<lb/>langen souden sijn, by
+                            geschrifte te vervatten, en den aert dier volckeren,
+                            hun<lb/>koopmanschappen, tam en wilt vee, aerdt- en boomgewassen,
+                            mineraal en verdre<lb/>rijckdom, exactelijck aan te teyckenen, en ’t
+                            overige volck van de gestrande<lb/>fleuyt Stavenisse te bergen,
+                            hetwelcke sy ingevolge van dien, en conform hun<lb/>nevensgaande
+                            daghregister, geluckig hebben uy tgevoert <hi rend="superscript">2)</hi>
+                            .</p>
+            <p>Sy hebben ter voorsch. plaatse een seer bequaeme baey, en veyligh
+                            voor<lb/>menigte van grote en kleyne schepen, gevonden, in dewelcke sigh
+                            Rio de la Goa<lb/>en andere rivieren komen te losen, sooals Uw Ed. Ho.
+                            Agtb. ’t selve in de byge-<lb/>voegde kaart nader en naeckter sullen
+                            gelieven te beogen <hi rend="superscript">3).</hi> Oock hebben sy
+                            daar<lb/>den 15 November een Engels met een Portugees scheepge in
+                            ladinge, en d’ in-<lb/>landers kloeck van lijf en leden, argh en
+                            listigh, wel gewapent, en een harer opper-<lb/>hoofden wel seven
+                            Rijnlantsche voeten langh, gevonden. De inlanders bewonen<lb/>ronde,
+                            oock vierkante met riet gevlogte en gedeckte huysges, van binnen en
+                            van<lb/>buyten schoon om aan te sien; hun lant is uytsteeckent
+                            vrugtbaar, en meesten deel<lb/>vlack; sy hebben daar veelderhande boom-
+                            en aardtvrugten gevonden, en onder<lb/>anderen annanassen, pisangh,
+                            watermeloenen, pompoenen, kalabassen, patatten,<lb/>mitsgaders een soort
+                            van er weten en boontjes, en tweederley slagh van koorn,<lb/>en ’t selve
+                            dat op Terra de Natal groeyt, daar se broot en bier van
+                            maecken.<lb/>Koeyen en schapen vallen hier sooveel niet als op Terra de
+                            Natal, dogh geyten en<lb/>hoenders en wilt gedierte genoegh van
+                            alderhande soort, sooals aan Terra de<lb/>Natal, met dewelcke haar taal
+                            byna geheel overeenkomt ; visch isser oock in over-<lb/>vloet. Daar is
+                            bequame plaats tot vestinghbouw ; oock sijn daar verscheyde
+                            groote<lb/>rivieren van soet en sout water.</p>
+            <p>Hier tot den 29 December met ’t galjodt de Noord gelegen, en alles,
+                            wat<lb/>eenigsints dienen konde, aangeteeckent, en de gronden en killen
+                            gepeylt hebbende,<lb/>sijn se dese kust langs, om deselve te ontdecken,
+                            en vervolgens na de Bhaey van<lb/>Natal t’ zeyl gegaan, alwaar se den 5
+                            January deses jaars ten ancker quamen,<lb/>vindende aldaar Adriaan
+                            Jansz. Kint, van Maaslandsluys, bootsman, mitsgaders<lb/>Jan Pietersz.,
+                            van Sluys, jongen<hi rend="superscript">4*</hi>), beyde op de gestrande
+                            fluyt Stavenisse be-<lb/>scheyden geweest ; dit gewest, mitsgaders de
+                            baey, gepeylt en in een kaart gebragt
+<note place="bottom" resp="editor">1) Extract uyt de missive aan de vergaderinge der heeren Seventiene
+                                door den comman-<lb/>deur Simon van der Stel en den raadt aan Cabo
+                                de Bonne Esperance, geschreven in dato<lb/>15 April 1689. Het
+                                opschrift is door mij bijgevoegd. (N. v. d. U.)<lb/></note>
+<note place="bottom" resp="editor">2) Zie <hi rend="italic">Reizen,</hi>
+                                III, blz. 123 — 164. (N. v. d. U.)<lb/></note>
+<note place="bottom" resp="editor">3) Zie o. 1. blz. 128. (N. v. d. U.)<lb/></note>
+<note place="bottom">4) Het uit ethnologisch oogpunt belangrijke <hi rend="italic">Relaas</hi> van de beide genoemden en
+                                den<lb/></note>
+<note place="bottom" resp="editor">hierna te noemen
+                                Jansz vindt men in <hi rend="italic">Reizen,</hi> III, blz. 59 — 68.
+                                (N. v. d. U.)<lb/></note>
+        <pb n="571" facs="http://resources.huygens.knaw.nl/retroapp/service_vandam/vandam_2_3/images/vandam_2_3_gs83_0571.tiff"/>
+hebbende, staecken sy den 23 dito
+                            wederom in zee, en quanten 28 dito voor ’t<lb/>landt van de Magoses<hi rend="superscript">1</hi>) op 33 graden 42 minuten Zuyderbreette ten
+                            ancker,<lb/>alwaar aan hun boort door de brandingh op lijfsgevaar quam
+                            swemmen Isaac<lb/>Jansz., gewesen matroos op Stavenisse, agterlatende
+                            sijn macker, die aan lant<lb/>uyt kleynmoedigheyt bleef staan. Dese drie
+                            luyden gedragen haar ten vollen<lb/>aan de verklaringh, den 2 Maart 1687
+                            by de stuyrluyden en matrosen van de<lb/>fleuyt Stavenisse plegtelijck
+                            voor gecommitteerdens hier verleden, en confor-<lb/>meren haar met
+                            deselve.</p> 
+
+        </body>
+    </text>
+</TEI>

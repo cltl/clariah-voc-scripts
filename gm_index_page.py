@@ -1,11 +1,10 @@
+"""Index Extraction from a Generale Missiven index page."""
+
 import sys
-from lxml import etree
 import re
-from itertools import chain
-
-
-IN_PAREN = r"([^(]*\S)\((.*)\)(.*)"     #Ajengo(a)
-EXT_PAREN = r"([^(]*) \((.*)\)"         #Delftse  Poort  (Colombo)
+from utils.func import flatmap
+from utils.lexicon import format_entry, ext_paren_vars, in_paren_vars
+from utils.tei_xml import words_from_file
 
 
 def clean(s):
@@ -14,22 +13,6 @@ def clean(s):
     if ', zie ' in s:
         s = s.split(', zie ')[0]    # removes ', zie ...' references
     return re.sub(r"  +", " ", s)   # occurs in hOCR files
-
-
-def ext_paren_vars(s):
-    m = re.search(EXT_PAREN, s)
-    if m is not None:
-        return [m.group(1), m.group(2)]
-    else:
-        return [s]
-
-
-def in_paren_vars(s):
-    m = re.search(IN_PAREN, s)
-    if m is not None:
-        return ["{}{}{}".format(m.group(1), m.group(2), m.group(3)), "{}{}".format(m.group(1), m.group(3))]
-    else:
-        return [s]
 
 
 def comma_inverted_vars(s):
@@ -42,10 +25,6 @@ def comma_inverted_vars(s):
             return [parts[0]]
     else:
         return [s]
-
-
-def flatmap(fct, lst):
-    return list(chain.from_iterable(map(fct, lst)))
 
 
 def variants(s):
@@ -75,26 +54,21 @@ def word_sequences(word_page_seqs):
 
 def gazetteer_items(in_file):
     """Extracts w elements in a TEI input file and returns lexicon entries with their variants."""
-    word_page_seqs = [e.text for e in etree.parse(in_file).getroot().findall(".//w")]
-    items = list(set(chain.from_iterable(map(variants, word_sequences(word_page_seqs)))))
+    items = list(set(flatmap(variants, word_sequences(words_from_file(in_file)))))
     items.sort()
     return items
-
-
-def format_lexicon_entry(item, label):
-    return "{}\t{}\n".format(item, label)
 
 
 def extract(in_file, label, out_file):
     """Extracts lexicon entries from a TEI input file and writes them out along with their NE label."""
     with open(out_file, 'w') as f:
         for item in gazetteer_items(in_file):
-            f.write(format_lexicon_entry(item, label))
+            f.write(format_entry(item, label))
 
 
 if __name__ == "__main__":
     if len(sys.argv) != 4:
         print("Usage:")
-        print("python index_page_extracter.py {tei_file} {NE_type} {out_file}")
+        print("python gm_index_page.py {tei_file} {NE_type} {out_file}")
         exit(1)
     extract(sys.argv[1], sys.argv[2], sys.argv[3])

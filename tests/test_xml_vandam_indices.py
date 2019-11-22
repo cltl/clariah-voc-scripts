@@ -1,6 +1,6 @@
-from vandam_indices import extract
+from xml_vandam_indices import extract
 
-INFILE = 'data/vandam-indices.xml'
+INFILE = 'data/tests/vandam-indices.xml'
 
 
 def test_vandam_indices():

@@ -5,11 +5,11 @@ Entries are cleaned up and filtered, notably to remove page numbers and discard 
 Entries that have comma-separated parts are reordered, and alternative forms (marked by parentheses) are extracted.
 """
 
-import itertools
 import sys
 import glob
 import re
-from index_page_extracter import flatmap, in_paren_vars, ext_paren_vars
+from utils.lexicon import ext_paren_vars, in_paren_vars, format_entry, NE
+from utils.func import flatmap, product, product_fold
 
 
 def clean(s):
@@ -80,14 +80,6 @@ def combinations(var_parts):
     return [" ".join(p) for p in all_combinations]
 
 
-def product_fold(list1, list2):
-    return [[e[0]] + e[1] for e in itertools.product(list1, list2)]
-
-
-def product(list1, list2):
-    return [list(e) for e in itertools.product(list1, list2)]
-
-
 def process_entry(s):
     return combinations(variant_parts(s))
 
@@ -124,11 +116,6 @@ def extract_entries(indir, volume):
         return flatmap(process_file(lambda x: [validate_raw_entry(clean(x))]), glob.glob('{}/*'.format(indir)))
 
 
-def write(indices, label, outfile):
-    with open(outfile, 'w') as f:
-        f.write('\n'.join(["{}\t{}".format(i, label) for i in indices]))
-
-
 def parenthesis_variants(s):
     paren_vars = ext_paren_vars(s)
     if len(paren_vars) > 1:
@@ -148,18 +135,18 @@ def infer_label(entry):
     paren_vars = ext_paren_vars(entry)
     if len(paren_vars) > 1:
         if is_shipname_marker(paren_vars[1]):
-            return "{}\tSHP".format(paren_vars[0])
+            return format_entry(paren_vars[0], NE.SHP.name)
         elif is_location_marker(paren_vars[1]):
-            return "{}\tLOC".format(paren_vars[0])
-    return "{}\tOTH".format(paren_vars[0])
+            return format_entry(paren_vars[0], NE.LOC.name)
+    return format_entry(paren_vars[0], NE.OTH.name)
 
 
 def add_labels(entries, volume, label):
     if volume == '4':
-        return ["{}\t{}".format(i, label) for i in entries]
-    elif label == 'PER':
+        return [format_entry(i, label) for i in entries]
+    elif label == NE.PER.name:
         entries = flatmap(parenthesis_variants, entries)
-        return ["{}\t{}".format(i, label) for i in entries if i]
+        return [format_entry(i, label) for i in entries if i]
     else:
         return [infer_label(i) for i in entries if i]
 
@@ -167,13 +154,14 @@ def add_labels(entries, volume, label):
 def extract(volume, indir, label, outfile):
     entries = extract_entries(indir, volume)
     with open(outfile, 'w') as f:
-        f.write('\n'.join([e for e in add_labels(entries, volume, label)]))
+        for e in add_labels(entries, volume, label):
+            f.write(e)
 
 
 if __name__ == "__main__":
     if len(sys.argv) != 5:
         print("Usage:")
-        print("python vandam_indices.py {volume} {indir} {NE-type} {outfile}")
+        print("python html_vandam_indices.py {volume} {indir} {NE-type} {outfile}")
         exit(1)
     extract(sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4])
 

@@ -1,12 +1,12 @@
+"""Corpus-level Index Extraction for the Generale Missiven."""
+
 import glob
-import re
 import sys
-from index_page_extracter import gazetteer_items, format_lexicon_entry
+from gm_index_page import gazetteer_items
+from utils.lexicon import format_entry, vol_page, NE
 
-
-LABEL = {'persons': 'PER', 'ship names': 'SHP', 'locations': 'LOC', 'other': 'OTH'}
-VOL_PAGE = r"\D*(\d+)\D*(\d+)\D*"
-INDICES_FILE = 'data/GM_indices.csv'
+INDICES_FILE = 'data/resources/GM_indices.csv'
+LABEL = {'persons': NE.PER.name, 'ship names': NE.SHP.name, 'locations': NE.LOC.name, 'other': NE.OTH.name}
 
 
 def load(indices_file):
@@ -28,13 +28,6 @@ def load(indices_file):
 def ne_label(indices, vol, p):
     """Returns a label given a volume and page number"""
     return next(label for (label, pp) in indices[vol].items() if p in range(pp[0], pp[1]))
-
-
-def vol_page(fname):
-    m = re.search(VOL_PAGE, fname)
-    if m is not None:
-        return int(m.group(1)), int(m.group(2))
-    return None
 
 
 def files(dirname, volume, pages):
@@ -71,12 +64,12 @@ def extract_lexicon(dirname, volume, page_str, out_file):
         for f in tei_files:
             vol, page = vol_page(f)
             for item in gazetteer_items(f):
-                fo.write(format_lexicon_entry(item, ne_label(indices, vol, page)))
+                fo.write(format_entry(item, ne_label(indices, vol, page)))
 
 
 if __name__ == "__main__":
     if len(sys.argv) != 5:
         print("Usage:")
-        print("python collection_extracter.py {dirname} {volume} {pages:all|x-y} {out_file}")
+        print("python gm_indices.py {dirname} {volume} {pages:all|x-y} {out_file}")
         exit(1)
     extract_lexicon(sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4])
