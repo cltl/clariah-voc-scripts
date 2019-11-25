@@ -22,6 +22,9 @@ def body(infile):
     return root(infile).find(tei_path('body'))
 
 
+def text(infile):
+    return root(infile).find(tei_path('text'))
+
 def docid(infile):
     return root(infile).find(tei_path('idno')).text
 

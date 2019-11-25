@@ -1,9 +1,10 @@
 from utils.tei_tree import NEXT_PAGE_FLAG, PREVIOUS_PAGE_FLAG
 from utils.tei_xml import docid
-from vandam_extracter import extract_pages, normalize_page
+from vandam_extracter import extract_pages, normalize_page, regroup_paragraphs
 
 IN_FILE = 'data/tests/vandam_extract.xml'
 PB_FILE = 'data/tests/vandam_23_p570.xml'
+
 
 def test_tei_collection():
     pages = extract_pages(IN_FILE)
@@ -55,3 +56,16 @@ def test_no_superfluous_page_break_markers():
     assert len(pages) == 2
     assert len(pages[0][1]) == 10
 
+
+def test_paragraph_completion():
+    pages = extract_pages(IN_FILE)
+    page, paragraphs = pages[0]
+    assert paragraphs[5].endswith("drie jaren de {}".format(NEXT_PAGE_FLAG))
+    assert pages[1][1][6].endswith("vertreckende {}".format(NEXT_PAGE_FLAG))
+
+    pages = regroup_paragraphs(pages)
+    assert pages[0][1][5].endswith('gemaeckt.')
+    assert "drie jaren de Compagnie" in pages[0][1][5]
+
+    assert "vertreckende schepen" in pages[1][1][5]
+    # (paragraph index changed to 5 because pages[1][1][0] was deleted by regroup call)

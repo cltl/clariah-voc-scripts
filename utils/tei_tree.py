@@ -106,6 +106,26 @@ class TextTree:
         else:
             return [self]
 
+    def add_missing_page_break_markers(self):
+        """Some paragraphs are interrupted whereas their first part is apparently closed."""
+        if self.children:
+            self.add_missing_next_page_flags()
+            for c in self.children:
+                c.add_missing_page_break_markers()
+
+    def add_missing_next_page_flags(self):
+        goal = -1
+        for i, c in enumerate(self.children):
+            if c.text.endswith(NEXT_PAGE_FLAG):
+                goal = i
+            if c.text.startswith(PREVIOUS_PAGE_FLAG):
+                if goal == -1:
+                    for j in range(i - 1, 0, -1):
+                        if tx.is_paragraph(self.children[j]):
+                            self.children[j].text += NEXT_PAGE_FLAG
+                            goal == -1
+                            break
+
     def remove_multiple_whitespace(self):
         if self.text:
             self.text = re.sub(r"\s\s+", ' ', self.text)
@@ -127,15 +147,23 @@ class TextTree:
         text += self.tail
         return text
 
-    def reshape(self):
+    def clean_page_breaks(self):
         """Visits the tree, splitting interrupted paragraph nodes."""
         self.children = flatmap(lambda x: x.resolve_page_breaks(), self.children)
         for c in self.children:
-            c.reshape()
+            c.clean_page_breaks()
+
+    def simplify_text(self):
+        if tx.is_head(self) or tx.is_note(self) or tx.is_paragraph(self):
+            self.text = self.subsumed_text()
+            self.tail = ''
+            self.children = []
+        for c in self.children:
+            c.simplify_text()
 
     def collect_loop(self, pages, page, paragraphs):
         if tx.is_head(self) or tx.is_note(self) or tx.is_paragraph(self):
-            paragraphs.append(self.subsumed_text())
+            paragraphs.append(self.text)    # or self.subsumed_text() if self.simplify_text were not called
         elif tx.is_page_break(self):
             if paragraphs:
                 pages.append((page, paragraphs))
@@ -148,7 +176,9 @@ class TextTree:
 
     def collect_pages(self):
         self.remove_multiple_whitespace()
-        self.reshape()
+        self.clean_page_breaks()
+        self.simplify_text()
+        self.add_missing_page_break_markers()
         pages, page, paragraphs = self.collect_loop([], 0, [])
         if paragraphs:
             pages.append((page, paragraphs))
