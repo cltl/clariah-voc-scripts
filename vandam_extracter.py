@@ -1,4 +1,5 @@
 """Text extraction from Van Dam TEI files"""
+import argparse
 import pathlib
 import re
 import sys
@@ -70,24 +71,35 @@ def regroup_paragraphs(pages):
     return pages
 
 
-def process(infile, outdir, complete_paragraphs=True, sfx='txt'):
+def strip_page_breaks(pages):
+    def strip_paras(paragraphs):
+        return [p.replace(PREVIOUS_PAGE_FLAG, '').replace(NEXT_PAGE_FLAG, '') for p in paragraphs]
+
+    return [(n, strip_paras(ps)) for (n, ps) in pages]
+
+
+def process(infile, outdir, complete_paragraphs=True, strip_page_markers=True, sfx='txt'):
     pathlib.Path(outdir).mkdir(parents=True, exist_ok=True)
     pages = extract_pages(infile)
     if complete_paragraphs:
         pages = regroup_paragraphs(pages)
+    elif strip_page_markers:
+        pages = strip_page_breaks(pages)
     for (filename, paragraphs) in name_files(outdir, tx.docid(infile), sfx, pages):
         with open(filename, 'w') as f:
             f.write(format_page(paragraphs))
 
 
 if __name__ == "__main__":
-    if len(sys.argv) < 3:
-        print("Usage:")
-        print("python vandam_extracter.py {infile} {outdir} {complete_paragraphsh")
-        exit(1)
+    parser = argparse.ArgumentParser(description='Text extraction from Van Dam TEI files')
+    parser.add_argument('-i', '--in_file', dest='infile', type=str, help='input file')
+    parser.add_argument('-o', '--out_dir', dest='outdir', type=str, help='output directory')
+    parser.add_argument('-c', '--complete', dest='complete', action='store_true', help="completes paragraphs "
+                                                                                       "interrupted by page breaks")
+    parser.add_argument('-s', '--strip', dest='strip', action='store_true', help='strips page-break markers')
 
-    mark_page_breaks = len(sys.argv) == 4 and not re.match("[tT]rue", sys.argv[3])
-    process(sys.argv[1], sys.argv[2], complete_paragraphs=not mark_page_breaks)
+    args = parser.parse_args()
+    process(args.infile, args.outdir, complete_paragraphs=args.complete, strip_page_markers=args.strip)
 
 
 
