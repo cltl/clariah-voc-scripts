@@ -1,5 +1,7 @@
 """Functions for processing TEI files with lxml.etree"""
 
+import os
+from urllib.request import pathname2url
 from lxml import etree
 
 TEI_NS = "http://www.tei-c.org/ns/1.0"
@@ -14,6 +16,24 @@ def parse(file):
     return etree.parse(file)
 
 
+def parse_with_dtd(file):
+
+    # The XML_CATALOG_FILES environment variable is used by libxml2 (which is used by lxml).
+    # See http://xmlsoft.org/catalog.html.
+    #try:
+    #    xcf_env = os.environ['XML_CATALOG_FILES']
+    #except KeyError:
+        # Path to catalog must be a url.
+    #    catalog_path = f"file:{pathname2url(os.path.join(os.getcwd(), 'data/resources/catalog.xml'))}"
+        # Temporarily set the environment variable.
+    #    os.environ['XML_CATALOG_FILES'] = catalog_path
+    dtd = etree.DTD(file='data/resources/teixlite.dtd')
+    parser = etree.XMLParser(load_dtd=True,
+                             no_network=True,
+                             resolve_entities=True)
+    return etree.parse(file, parser)
+
+
 def root(file):
     return parse(file).getroot()
 
@@ -24,6 +44,7 @@ def body(infile):
 
 def text(infile):
     return root(infile).find(tei_path('text'))
+
 
 def docid(infile):
     return root(infile).find(tei_path('idno')).text

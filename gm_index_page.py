@@ -8,10 +8,14 @@ from utils.tei_xml import words_from_file
 
 
 def clean(s):
-    if s.endswith(','):             # occurs in TEI files
+    if s.endswith(',') or s.endswith(':'):             # occurs in TEI files
         s = s[:-1]
     if ', zie ' in s:
         s = s.split(', zie ')[0]    # removes ', zie ...' references
+    if ': zie ' in s:
+        s = s.split(': zie ')[0]
+    if '[ook' in s:
+        s = s.split('[ook')[0]
     return re.sub(r"  +", " ", s)   # occurs in hOCR files
 
 

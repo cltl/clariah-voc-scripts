@@ -1,13 +1,13 @@
 """Patterns and labels for index extraction"""
 
 import re
+from enum import Enum
 
 # ------ Patterns ------
-from enum import Enum
 
 IN_PAREN = re.compile(r"([^(]*\S)\((.*)\)(.*)")     # Ajengo(a)
 EXT_PAREN = re.compile(r"([^(]*) \((.*)\)")         # Delftse  Poort  (Colombo)
-VOL_PAGE = re.compile(r"\D*(\d+)\D*(\d+)\D*")       # gm_8_foo_255_bar
+VOL_PAGE = re.compile(r"\D*_(\d+)_\D*(\d+)\D*")       # gm_8_foo_255_bar
 
 
 def ext_paren_vars(s):
